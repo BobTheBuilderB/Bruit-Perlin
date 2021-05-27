@@ -13,19 +13,14 @@
         processing.background(0xFFF);        
 
         with (processing) {
-           
-//USE THE ARROW KEYS TO MOVE
-
+          
 //reload the page for a new map
-
-
-
 
 //how detailed the map is? Bigger numbers produce lower quality
 var noiseScale=0.01;
 
 //dot size
-var psize = 1;
+var psize = 2;
 
 //time
 var t = 0;
@@ -39,28 +34,16 @@ var trees = 117;
 //min height each is found at
 var snowline = 230;
 
-
-
 //position object
 var p = {
     x: 0,
     y: 0,
 };
 
-//in order to move...
-var keys = [];
-var keyPressed = function(){keys[keyCode]=true;};
-var keyReleased = function(){keys[keyCode]=false;};
-
-
-
-
-
-
 //draw loop
 var draw = function() {
     
-    //important!!
+    
     background(0);
     
     //begin data calcutation
@@ -91,19 +74,7 @@ var draw = function() {
         }
     }
     
-    //to be able to move
-    if(keys[UP]){
-        p.y-=psize;
-    }
-    if(keys[DOWN]){
-        p.y+=psize;
-    }
-    if(keys[LEFT]){
-        p.x-=psize;
-    }
-    if(keys[RIGHT]){
-        p.x+=psize;
-    }
+    //time passes
     t+=0.1;
 
     
